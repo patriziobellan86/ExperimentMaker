@@ -1,0 +1,32 @@
+Experiment Maker is a software  a software developed to reduce the effort and the time spent when design prompts
+and combining multiple prompts in a pipeline.
+
+Our system is composed of two complementary components: Prompt Designer and Pipeline Maker
+- Prompt Designer: supports users to design and calibrating prompts.
+- Pipeline Maker: helps users in creating a pipeline by combining multiple prompts.
+
+Demo video:
+------------------
+You can see our tool in action at: ADD URL VIDEO
+
+Installation:
+------------------
+You can install both packages from pypi.
+
+Prompt Designer:
+$  pip install promptdesigner
+
+Pipeline Maker:
+$  pip install pipelinemaker
+
+To lunch them, open a python terminal and digit:
+
+Prompt Designer:
+------------------
+from promptdesigner.PromptDesigner import LunchPromptDesigner
+LunchPromptDesigner()
+
+Pipeline Maker:
+------------------
+from pipelinemaker.experimentmaker import LunchExperiment
+LunchExperiment()
