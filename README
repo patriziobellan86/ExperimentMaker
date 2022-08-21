@@ -7,7 +7,7 @@ Our system is composed of two complementary components: Prompt Designer and Pipe
 
 Demo video:
 ------------------
-You can see our tool in action at: https://vimeo.com/741423478
+You can see our tool in action at: https://youtu.be/v8AA6ErWnJQ
 
 Installation:
 ------------------
@@ -30,3 +30,26 @@ Pipeline Maker:
 ------------------
 from pipelinemaker.experimentmaker import LunchExperiment
 LunchExperiment()
+
+Custom Modules (filters)
+------------------
+You can test our custom modules (written in python) contained in the folder filters-scripts.
+To create your own custom filter, you simply need to write a python class with a method, or a python function,
+ called 'Parse'.
+ The results are automatically passed to the method/function.
+
+ For example, consider the next function.
+ This function receive the results (data variable) and clean the answers.
+
+
+ def Parse(self, data):
+    def parseitem(item):
+        item = item.replace('-', '', 1)
+        item = item.replace("'", '', 1)
+        item = item.replace("'", '', 1)
+        item = item.strip()
+        return item
+
+    if type(data) == str:
+        return parseitem(data)
+    return [parseitem(item) for item in data]
