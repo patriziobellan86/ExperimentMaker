@@ -30,20 +30,20 @@ Installation:
 You can choose to install the entire program from pypi
 
 - Experiment Maker
-    .. code:: python
-        pip install experimentmaker
+
+    pip install experimentmaker
 
 
 Or, install one of the two components:
 
 - Prompt Designer
-    .. code:: python
-        pip install promptdesigner
+
+    pip install promptdesigner
 
 
 - Pipeline Maker
-    .. code:: python
-        pip install pipelinemaker
+
+    pip install pipelinemaker
 
 
 Execute programs:
@@ -52,24 +52,24 @@ Execute programs:
 To lunch *Experiment Maker*, open a python terminal and simply import ``experimentmaker`` file:
 
 - Experiment Maker:
-    .. code:: python
-        import experimentmaker.experimentmaker
+
+import experimentmaker.experimentmaker
 
 
 To lunch one of the components
 
 - Prompt Designer:
 
-    .. code:: python
+
     from promptdesigner.PromptDesigner import LunchPromptDesigner
-        LunchPromptDesigner()
+    LunchPromptDesigner()
 
 
 - Pipeline Maker:
-    ```python
-        from pipelinemaker.experimentmaker import LunchExperiment
-        LunchExperiment()
-    ```
+
+    from pipelinemaker.experimentmaker import LunchExperiment
+    LunchExperiment()
+
 
 Custom Modules (filters)
 ------------------
@@ -81,16 +81,16 @@ The results of a step, or the results of the pipeline are passed as dictionary t
  For example, consider the following example function.
  This function receives the results (data variable) and clean the answers by removing unused characters from the text.
 
-    .. code:: python
-         def Parse(self, data):
-            def parseitem(item):
-                item = item.replace('-', '', 1)
-                item = item.replace("'", '', 1)
-                item = item.replace("'", '', 1)
-                item = item.strip()
-                return item
 
-            if type(data) == str:
-                return parseitem(data)
-            return [parseitem(item) for item in data]
+     def Parse(self, data):
+        def parseitem(item):
+            item = item.replace('-', '', 1)
+            item = item.replace("'", '', 1)
+            item = item.replace("'", '', 1)
+            item = item.strip()
+            return item
+
+        if type(data) == str:
+            return parseitem(data)
+        return [parseitem(item) for item in data]
 
