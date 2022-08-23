@@ -15,7 +15,7 @@ Our system is composed of two complementary components:
     Adopted in "Assisted Knowledge Graph Building Using Pre-Trained Language Models"
 
 
-    It is possible to integrate python script to manipulate results.
+    It is possible to integrate custom python scripts to manipulate results.
 
 
 Demo video:
@@ -30,7 +30,6 @@ Installation:
 You can choose to install the entire program from pypi
 
 - Experiment Maker
-
     .. code:: python
         pip install experimentmaker
 
@@ -38,13 +37,11 @@ You can choose to install the entire program from pypi
 Or, install one of the two components:
 
 - Prompt Designer
-
     .. code:: python
         pip install promptdesigner
 
 
 - Pipeline Maker
-
     .. code:: python
         pip install pipelinemaker
 
@@ -83,21 +80,16 @@ The results of a step, or the results of the pipeline are passed as dictionary t
  For example, consider the following example function.
  This function receives the results (data variable) and clean the answers by removing unused characters from the text.
 
+    .. code:: python
+         def Parse(self, data):
+            def parseitem(item):
+                item = item.replace('-', '', 1)
+                item = item.replace("'", '', 1)
+                item = item.replace("'", '', 1)
+                item = item.strip()
+                return item
 
- def Parse(self, data):
-    def parseitem(item):
-        item = item.replace('-', '', 1)
-        item = item.replace("'", '', 1)
-        item = item.replace("'", '', 1)
-        item = item.strip()
-        return item
+            if type(data) == str:
+                return parseitem(data)
+            return [parseitem(item) for item in data]
 
-    if type(data) == str:
-        return parseitem(data)
-    return [parseitem(item) for item in data]
-
-
-# Pipeline Maker
-
-
-(Documentation under construction)
