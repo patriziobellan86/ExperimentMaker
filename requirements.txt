@@ -1,0 +1,5 @@
+setuptools
+openai
+fpdf
+openpyxl
+pillow
