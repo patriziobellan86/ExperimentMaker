@@ -9,8 +9,7 @@ Our system is composed of two complementary components:
 - ``Prompt Designer``: supports users to design and calibrating prompts.
     Research project adopted in "Leveraging pre-trained language models for conversetional information seeking from text"
 
-- ``Pipeline Maker``:
-    helps users in creating a pipeline by combining multiple prompts.
+- ``Pipeline Maker``: helps users in creating a pipeline by combining multiple prompts.
     Pipeline Maker. This tool is part of the Experiment Maker project. It allows to create custom GPT-3 pipeline.
 
     Adopted in "Assisted Knowledge Graph Building Using Pre-Trained Language Models"
@@ -22,7 +21,7 @@ Our system is composed of two complementary components:
 Demo video:
 ------------------
 You can see our tool in action here_.
-.. here_: https://youtu.be/_xVGsghZeX8
+..here_:https://youtu.be/_xVGsghZeX8
 
 
 Installation:
