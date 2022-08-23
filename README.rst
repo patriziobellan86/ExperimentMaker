@@ -59,8 +59,9 @@ To lunch *Experiment Maker*, open a python terminal and simply import ``experime
 To lunch one of the components
 
 - Prompt Designer:
+
     .. code:: python
-        from promptdesigner.PromptDesigner import LunchPromptDesigner
+    from promptdesigner.PromptDesigner import LunchPromptDesigner
         LunchPromptDesigner()
 
 
