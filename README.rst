@@ -65,10 +65,10 @@ To lunch one of the components
 
 
 - Pipeline Maker:
-    .. code:: python
+    ```python
         from pipelinemaker.experimentmaker import LunchExperiment
         LunchExperiment()
-
+    ```
 
 Custom Modules (filters)
 ------------------
