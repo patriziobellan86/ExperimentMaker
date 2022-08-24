@@ -1,0 +1,5 @@
+setuptools~=60.9.2
+openpyxl~=3.0.9
+openai~=0.14.0
+promptdesignerdataset~=0.0.1a0
+Pillow~=9.0.1

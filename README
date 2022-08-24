@@ -1,0 +1,55 @@
+Experiment Maker is a software  a software developed to reduce the effort and the time spent when design prompts
+and combining multiple prompts in a pipeline.
+
+Our system is composed of two complementary components: Prompt Designer and Pipeline Maker
+- Prompt Designer: supports users to design and calibrating prompts.
+- Pipeline Maker: helps users in creating a pipeline by combining multiple prompts.
+
+Demo video:
+------------------
+You can see our tool in action at: https://youtu.be/_xVGsghZeX8
+
+Installation:
+------------------
+You can install both packages from pypi.
+
+Prompt Designer:
+$  pip install promptdesigner
+
+Pipeline Maker:
+$  pip install pipelinemaker
+
+To lunch them, open a python terminal and digit:
+
+Prompt Designer:
+------------------
+from promptdesigner.PromptDesigner import LunchPromptDesigner
+LunchPromptDesigner()
+
+Pipeline Maker:
+------------------
+from pipelinemaker.experimentmaker import LunchExperiment
+LunchExperiment()
+
+Custom Modules (filters)
+------------------
+You can test our custom modules (written in python) contained in the folder filters-scripts.
+To create your own custom filter, you simply need to write a python class with a method, or a python function,
+ called 'Parse'.
+ The results are automatically passed to the method/function.
+
+ For example, consider the next function.
+ This function receive the results (data variable) and clean the answers.
+
+
+ def Parse(self, data):
+    def parseitem(item):
+        item = item.replace('-', '', 1)
+        item = item.replace("'", '', 1)
+        item = item.replace("'", '', 1)
+        item = item.strip()
+        return item
+
+    if type(data) == str:
+        return parseitem(data)
+    return [parseitem(item) for item in data]
