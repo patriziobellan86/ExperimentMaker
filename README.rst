@@ -17,7 +17,7 @@ Our system is composed of two complementary components:
 
 Demo video:
 ------------------
-See our tool in action https://youtu.be/_xVGsghZeX8
+See our tool in action https://youtu.be/5e_XAdI2bPQ
 
 
 Installation:
